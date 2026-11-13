@@ -12,12 +12,14 @@
 <meta property="og:image" content="https://vicaxd.github.io/amanda-studio/img/amanda.webp">
 <link rel="preload" href="fonts/instrument-serif-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/instrument-serif-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/marcellus-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
 @font-face{font-family:"Instrument Serif";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/instrument-serif-normal.woff2) format("woff2")}
 @font-face{font-family:"Instrument Serif";font-style:italic;font-weight:400;font-display:swap;src:url(fonts/instrument-serif-italic.woff2) format("woff2")}
+@font-face{font-family:"Marcellus";font-weight:400;font-display:swap;src:url(fonts/marcellus-latin.woff2) format("woff2")}
 @font-face{font-family:"Inter Tight";font-weight:300 600;font-display:swap;src:url(fonts/inter-tight-latin.woff2) format("woff2")}
-:root{--wh:#fff;--li:#f3d1f4;--li2:#f9e8f9;--cr:#fdeed1;--pl:#600048;--pl2:#8a4f7d;--mu:#9b6b8f;--line:rgba(96,0,72,.14);--sf:"Instrument Serif",Georgia,serif;--ss:"Inter Tight",system-ui,-apple-system,"Segoe UI",sans-serif;--ease:cubic-bezier(.2,.7,.2,1)}
+:root{--wh:#fff;--li:#f3d1f4;--li2:#f9e8f9;--cr:#fdeed1;--pl:#600048;--pl2:#8a4f7d;--mu:#9b6b8f;--line:rgba(96,0,72,.14);--sf:"Instrument Serif",Georgia,serif;--mf:"Marcellus","Instrument Serif",Georgia,serif;--ss:"Inter Tight",system-ui,-apple-system,"Segoe UI",sans-serif;--ease:cubic-bezier(.2,.7,.2,1)}
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:80px;-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--wh);color:var(--pl);font:300 17px/1.65 var(--ss);-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -57,8 +59,8 @@ section{padding:120px 0}
 .top{position:fixed;inset:0 0 auto;z-index:40;border-bottom:1px solid transparent;transition:background .4s,border-color .4s}
 .top.s{background:rgba(255,255,255,.86);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-color:var(--line)}
 .top .w{display:flex;align-items:center;justify-content:space-between;gap:20px;height:76px}
-.brand{font:400 25px/1 var(--sf)}
-.brand em{color:var(--pl2)}
+.brand{font:400 17px/1 var(--mf);letter-spacing:.12em;text-transform:uppercase}
+.brand em{font-style:normal;color:var(--pl2)}
 .nav{display:none;gap:34px;font-size:14px;letter-spacing:.04em}
 .top .b{min-height:44px;padding:0 22px;font-size:14px}
 @media(min-width:960px){.nav{display:flex}}
@@ -72,9 +74,9 @@ section{padding:120px 0}
 .hero .cta{justify-content:center}
 .hg{display:grid;gap:48px;align-items:end}
 
-.name{font-size:clamp(76px,15vw,230px);line-height:.84;letter-spacing:-.03em;margin-top:32px}
+.name{font-family:var(--mf);font-size:clamp(40px,12vw,136px);line-height:1.02;letter-spacing:.06em;text-transform:uppercase;margin-top:32px}
 .name span{display:block}
-.name em{display:block;color:var(--pl2)}
+.name em{display:block;font-style:normal;color:var(--pl2)}
 .tag{font:400 clamp(26px,2.6vw,36px)/1.15 var(--sf);margin-top:36px}
 .tag em{color:var(--pl2)}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
@@ -83,7 +85,7 @@ section{padding:120px 0}
 .arch img{width:100%;height:100%;object-fit:cover;object-position:center 20%;transform:scale(1.06);transition:transform 2.4s var(--ease)}
 .ld .arch img{transform:none}
 .badge{position:absolute;left:50%;bottom:22px;translate:-50% 0;background:rgba(255,255,255,.9);border-radius:999px;padding:9px 18px;font:500 11px/1 var(--ss);letter-spacing:.2em;text-transform:uppercase;white-space:nowrap}
-@media(max-width:899px){.hero{padding:130px 0 80px}.cta .b{flex:1 1 100%}}
+@media(max-width:899px){.hero{padding:130px 0 80px}.cta .b{flex:1 1 100%}.tag em{display:block}}
 
 /* olhar */
 .ol{padding:110px 0 0;text-align:center}
@@ -191,8 +193,8 @@ dialog::backdrop{background:rgba(60,0,45,.55);-webkit-backdrop-filter:blur(6px);
 .loc .b.o:hover{color:var(--pl)}
 @media(max-width:600px){.loc .cta .b{flex:1 1 100%}}
 footer{background:var(--pl);color:var(--li);border-top:1px solid rgba(255,255,255,.14);padding:48px 0 calc(28px + env(safe-area-inset-bottom,0px))}
-footer .big{font:400 clamp(52px,11vw,170px)/.85 var(--sf);letter-spacing:-.03em;color:var(--wh)}
-footer .big em{color:var(--li)}
+footer .big{font:400 clamp(32px,7.4vw,110px)/1.05 var(--mf);letter-spacing:.06em;text-transform:uppercase;color:var(--wh)}
+footer .big em{font-style:normal;color:var(--li)}
 footer .fl{display:flex;flex-wrap:wrap;gap:10px 32px;justify-content:space-between;margin-top:36px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);font-size:14px}
 
 /* revelar */
