@@ -9,11 +9,10 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Amanda Rodrigues · Studio de cílios &amp; sobrancelhas">
 <meta property="og:description" content="As tendências do momento, nas suas mãos.">
-<meta property="og:image" content="https://vicaxd.github.io/amanda-studio/img/capa.webp">
+<meta property="og:image" content="https://vicaxd.github.io/amanda-studio/img/amanda.webp">
 <link rel="preload" href="fonts/instrument-serif-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/instrument-serif-italic.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="img/capa.webp" as="image" fetchpriority="high">
 <style>
 @font-face{font-family:"Instrument Serif";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/instrument-serif-normal.woff2) format("woff2")}
 @font-face{font-family:"Instrument Serif";font-style:italic;font-weight:400;font-display:swap;src:url(fonts/instrument-serif-italic.woff2) format("woff2")}
@@ -65,21 +64,26 @@ section{padding:120px 0}
 @media(min-width:960px){.nav{display:flex}}
 
 /* capa */
-.hero{background:var(--li2);padding:140px 0 0;overflow:hidden}
+.hero{background:var(--li2);padding:170px 0 120px;overflow:hidden;text-align:center}
+.hero .ey{justify-content:center;flex-wrap:wrap}
+.hero .ey span+span{color:var(--li)}
+.hero .ey span:first-child{color:inherit}
+@media(max-width:600px){.dk1{display:none}}
+.hero .cta{justify-content:center}
 .hg{display:grid;gap:48px;align-items:end}
-@media(min-width:900px){.hg{grid-template-columns:7fr 5fr;gap:56px}}
-.name{font-size:clamp(76px,13vw,200px);line-height:.84;letter-spacing:-.03em;margin-top:28px}
+
+.name{font-size:clamp(76px,15vw,230px);line-height:.84;letter-spacing:-.03em;margin-top:32px}
 .name span{display:block}
-.name em{display:block;padding-left:.7em;color:var(--pl2)}
+.name em{display:block;color:var(--pl2)}
 .tag{font:400 clamp(26px,2.6vw,36px)/1.15 var(--sf);margin-top:36px}
 .tag em{color:var(--pl2)}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
-.hl{padding-bottom:96px}
+
 .arch{border-radius:999px 999px 0 0;overflow:hidden;aspect-ratio:3/4;background:var(--li);position:relative}
 .arch img{width:100%;height:100%;object-fit:cover;object-position:center 20%;transform:scale(1.06);transition:transform 2.4s var(--ease)}
 .ld .arch img{transform:none}
 .badge{position:absolute;left:50%;bottom:22px;translate:-50% 0;background:rgba(255,255,255,.9);border-radius:999px;padding:9px 18px;font:500 11px/1 var(--ss);letter-spacing:.2em;text-transform:uppercase;white-space:nowrap}
-@media(max-width:899px){.hero{padding-top:110px}.hl{padding-bottom:0}.cta .b{flex:1 1 100%}.arch{aspect-ratio:4/5;max-width:440px;margin:0 auto;width:100%}}
+@media(max-width:899px){.hero{padding:130px 0 80px}.cta .b{flex:1 1 100%}}
 
 /* olhar */
 .ol{padding:110px 0 0;text-align:center}
@@ -218,7 +222,7 @@ footer .fl{display:flex;flex-wrap:wrap;gap:10px 32px;justify-content:space-betwe
 <main>
 <section class="hero"><div class="w hg">
 <div class="hl">
-<span class="ey">Studio de cílios &amp; sobrancelhas</span>
+<span class="ey"><span class="dk1">Lash &amp; brow designer</span><span class="dk1">✦</span>Studio de cílios &amp; sobrancelhas</span>
 <h1 class="name"><span>Amanda</span><em>Rodrigues</em></h1>
 <p class="tag rv">As tendências do momento, <em>nas suas mãos.</em></p>
 <div class="cta rv">
@@ -226,7 +230,6 @@ footer .fl{display:flex;flex-wrap:wrap;gap:10px 32px;justify-content:space-betwe
 <a class="b o" href="#catalogo">Ver técnicas e valores<svg class="ar" aria-hidden="true"><use href="#ar"/></svg></a>
 </div>
 </div>
-<figure class="arch"><img src="img/capa.webp" alt="Amanda Rodrigues, Studio de cílios e sobrancelhas" width="1000" height="1040" fetchpriority="high"><span class="badge">Lash &amp; brow designer</span></figure>
 </div></section>
 
 <section id="catalogo"><div class="w">
